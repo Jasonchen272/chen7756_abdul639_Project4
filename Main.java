@@ -1,3 +1,4 @@
+// Written by Jason Chen chen7756 and Nadir Abdullahi abdul639
 import java.util.Scanner;
 public class Main {
     public static void main(String args[]){
