@@ -12,6 +12,8 @@ public class Main {
             System.out.println("Select a mode: Easy, Medium, Hard");
             mode = s.next();
         }
+        System.out.println("Debug mode? false for no, true for yes");
+        boolean debug = s.nextBoolean();
         Minefield m;
         if(mode.equals("Hard")){//chose hard mode
             m = new Minefield(20,20,40);//new instance of minefield with hard parameters
@@ -27,7 +29,9 @@ public class Main {
             }
             m.createMines(guessX,guessY,40);//creates 40 mines not in starting position
             m.evaluateField();//changes cells status to correct values
-            m.printMinefield();//for debugging
+            if(debug) {
+                m.printMinefield();//for debugging
+            }
             m.revealZeroes(guessX,guessY);//reveals any zeros for first guess
             m.revealMines(guessX,guessY);//reveals a close mine to help user get started
             System.out.println(m);
@@ -46,7 +50,9 @@ public class Main {
             }
             m.createMines(guessX,guessY,12);//creates 12 mines not in starting position
             m.evaluateField();//changes cells status to correct values
-            m.printMinefield();//for debugging
+            if(debug) {
+                m.printMinefield();//for debugging
+            }
             m.revealZeroes(guessX,guessY);//reveals any zeros for first guess
             m.revealMines(guessX,guessY);//reveals a close mine to help user get started
             System.out.println(m);
@@ -65,13 +71,14 @@ public class Main {
             }
             m.createMines(guessX,guessY,5);//creates 5 mines not in starting position
             m.evaluateField();//changes cells status to correct values
-            m.printMinefield();//for debugging
+            if(debug) {
+                m.printMinefield();//for debugging
+            }
             m.revealZeroes(guessX,guessY);//reveals any zeros for first guess
             m.revealMines(guessX,guessY);//reveals a close mine to help user get started
             System.out.println(m);
         }
         while(!m.gameOver()) {//while game is not done
-            m.printMinefield();//for debugging
             System.out.println(m);//displays minefield to user
             //prompts user to type coordinates and if they want a flag shows how many flags are left
             System.out.println("Type coordinates and if you want a flag(" +m.getFlags()+" Remaining): [x][y] flag: [any number]/ no flag:[0]");
