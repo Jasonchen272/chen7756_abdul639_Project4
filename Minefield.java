@@ -1,3 +1,4 @@
+// Written by Jason Chen chen7756 and Nadir Abdullahi abdul639
 import java.util.Queue;
 import java.util.Random;
 import java.util.Scanner;
