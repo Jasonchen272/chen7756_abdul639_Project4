@@ -12,7 +12,7 @@ public class Main {
             System.out.println("Select a mode: Easy, Medium, Hard");
             mode = s.next();
         }
-        System.out.println("Debug mode? false for no, true for yes");
+        System.out.println("Debug mode? no: false, yes: true");
         boolean debug = s.nextBoolean();
         Minefield m;
         if(mode.equals("Hard")){//chose hard mode
@@ -93,6 +93,7 @@ public class Main {
             m.revealZeroes(0, 0);//reveals adjacent zeros by user guess
         }//while
         //game finished
+        m.printMinefield();//reveal answers
         if (!m.win) {//if user won
             System.out.println("Game Over, You Lose");
         }
