@@ -14,7 +14,7 @@ all moves after type x and y coor and 0 for no flag and any number to place
 
 Assumptions: inputs are all integers
 
-Extra Features: None
+Extra Features: The first guess calls triggers reveal zeroes as well as reveal mines
 
 Known Bugs: None
 
